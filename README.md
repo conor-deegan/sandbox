@@ -1,2 +1,3 @@
-# sandbox
-Snippets/Concepts/Bits
+# Sandbox
+
+Snippets/Concepts/Bits from [conordeegan.dev](https://conordeegan.dev/)
