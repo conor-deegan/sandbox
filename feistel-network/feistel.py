@@ -1,3 +1,5 @@
+# Requires Python 3
+
 # Imports
 import hashlib
 import math
@@ -42,7 +44,7 @@ def decrypt(ciphertext, secret):
     for ciphertext_block in ciphertext_blocks:
         # For each block, perform ROUNDS rounds
         for i in range(ROUNDS, 0, -1):
-            # Use the sub_keys in reverse order from encryption
+            # Use the sub_keys in reverse order compared to encryption
             ciphertext_block = round(ciphertext_block, sub_keys[i - 1])
         # Once rounds completed, add plaintext to plaintext blocks - reverse left and right halves
         plaintext_blocks.append(str(ciphertext_block[32:]) + str(ciphertext_block[:32]))
@@ -88,23 +90,23 @@ def hex_to_bits(hex):
     return bin(int(hex, 16))[2:]
 
 # Convert byte to corresponding ASCII character
-def bits_to_string(bits):
-    return ''.join([chr(int(x, 2)) for x in bits])
+def bits_to_string(bytes):
+    return ''.join([chr(int(x, 2)) for x in bytes])
 
 # Splits bit string into blocks of size block_size
 def split_to_blocks(bits, block_size):
     return [bits[i:i+block_size] for i in range(0, len(bits), block_size)]
 
-######## TEST CIPHER ########
+######## TEST NETWORK ########
 
 plaintext = 'Hello Feistel Network!'
 secret = 'My Secret Key'
 
-print('PLAINTEXT:', plaintext)
-print('SECRET KEY:', secret)
+print('PLAINTEXT:          ', plaintext)
+print('SECRET KEY:         ', secret)
 
 ciphertext = encrypt(plaintext, secret)
-print('CIPHERTEXT:', ciphertext)
+print('CIPHERTEXT:         ', ciphertext)
 
 recovered_plaintext = decrypt(ciphertext, secret)
 print('RECOVERED PLAINTEXT:', recovered_plaintext)
