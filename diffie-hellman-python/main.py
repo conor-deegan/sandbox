@@ -60,11 +60,11 @@ print('Testing encrption and decryption with the new shared secret...\n')
 
 # Alice creates ciphertext with her shared key
 alice_plaintext = 'Hey, Bob! I am Alice.'
-alice_ciphertext = alice.encrypt(alice_plaintext)
+alice_ciphertext = alice.encrypt(alice_plaintext, alice.shared_key)
 print('ALICE\'S CIPHERTEXT:', alice_ciphertext)
 
 # Alice sends ciphertext to Bob who decrypts it with his shared key
-bob_recovered_plaintext = bob.decrypt(alice_ciphertext)
+bob_recovered_plaintext = bob.decrypt(alice_ciphertext, bob.shared_key)
 print('BOB\'S RECOVERED PLAINTEXT:', bob_recovered_plaintext)
 
 if(alice_plaintext == bob_recovered_plaintext): print('\nAlice and Bob have successfully communicated using their shared secret key generated with Diffie Hellman.\n')

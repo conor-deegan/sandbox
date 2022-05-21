@@ -9,17 +9,17 @@ class ToySymmetricCipher():
         self.shared_key = bin(key)[2:]
 
     # Ecnrypt
-    def encrypt(self, plaintext):
+    def encrypt(self, plaintext, key):
         plaintext_bits = self.string_to_bits(plaintext)
-        key_stream = self.create_key_steam(self.shared_key, len(plaintext_bits))
+        key_stream = self.create_key_steam(key, len(plaintext_bits))
         ciphertext_bits = self.xor(plaintext_bits, key_stream)
         ciphertext = self.bits_to_hex(ciphertext_bits)
         return ciphertext
 
     # Decrypt
-    def decrypt(self, ciphertext):
+    def decrypt(self, ciphertext, key):
         ciphertext_bits = self.hex_to_bits(ciphertext)
-        key_stream = self.create_key_steam(self.shared_key, len(ciphertext_bits))
+        key_stream = self.create_key_steam(key, len(ciphertext_bits))
         plaintext_bits = self.xor(ciphertext_bits, key_stream)
         plaintext = self.bits_to_string(plaintext_bits)
         return plaintext
