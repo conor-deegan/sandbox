@@ -1,6 +1,6 @@
 # RSA
 
-See the post [here](https://conordeegan.dev/post/rsa-in-python)
+See the post [here](https://conordeegan.dev/posts/rsa-in-python)
 
 To run the code:
 

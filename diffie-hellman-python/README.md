@@ -1,6 +1,6 @@
 # Diffie Hellman key exchange
 
-See the post [here](https://conordeegan.dev/post/diffie-hellman-key-exchange)
+See the post [here](https://conordeegan.dev/posts/diffie-hellman-key-exchange)
 
 To run the key exchange code:
 

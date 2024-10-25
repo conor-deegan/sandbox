@@ -1,6 +1,6 @@
 # The Birthday Paradox
 
-See the post [here](https://conordeegan.dev/post/birthday-paradox)
+See the post [here](https://conordeegan.dev/posts/birthday-paradox)
 
 To run the code:
 

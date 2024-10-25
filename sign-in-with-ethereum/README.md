@@ -1,3 +1,3 @@
 # Sign-in with Ethereum
 
-See the post [here](https://conordeegan.dev/post/sign-in-with-ethereum)
+See the post [here](https://conordeegan.dev/posts/sign-in-with-ethereum)

@@ -1,6 +1,6 @@
 # Feistel Network
 
-See the post [here](https://conordeegan.dev/post/feistel-network-in-python)
+See the post [here](https://conordeegan.dev/posts/feistel-network-in-python)
 
 To run the code:
 
